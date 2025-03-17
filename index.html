@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Icons 2025</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">  
+        <script src="js/script.js" async defer></script>
+    </head>
+    <body class="eeee">
+        <div class="container">
+
+
+        <aside class="toolbar">
+            <h1>Sitevision Online Icons</h1>
+            <div class="controls">         
+                <div class="controls__control mode_new">
+                    <h2>Dark mode</h2>
+                    <label class="switch">                       
+                        <input type="checkbox" onchange="handleChange()">
+                        <span class="slider round"></span>
+                      </label>
+                </div>
+                <div class="controls__control iconSize">  
+                <h2>Icon size</h2>                               
+                    <div>
+                        <input type="range" min="12" max="96" oninput="handleSizeRange(this)" value="32">   <span id="rangeValue" class="rangeValue">32</span>
+                    </div>                    
+                </div>        
+                <div class="controls__control iconColor">  
+                    <h2>Icon color</h2>                               
+                        <div class="color">
+                            <input type="color" oninput="setIconColor(this)" id="iconColorPicker">
+                            <button class="reset" onclick="resetIconColor()"> <svg><use href="#undo"/></svg></button>
+                        </div>                    
+                    </div>     
+                <div class="controls__control search">
+                    <h2>Search icon</h2>
+                    <div class="search__input">
+                        <input type="text" onkeyup="search(this)" id="searchForm" class="searchForm">
+                        <button class="reset" onclick="clearSearch()"><svg><use href="#undo"/></svg></button>
+                    </div>
+                </div>
+        </div>
+    </aside>
+        <main>
+            <div id="searchResult" class="searchResult"></div>
+            <div id="listIcons" class="listIcons"></div>
+
+        </main>
+        <aside class="focus">
+            <div id="focusArea"></div>
+        </aside>
+    </div>         
+<div id="mySprite"></div>
+
+    </body>
+
+</html>
