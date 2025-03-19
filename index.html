@@ -7,7 +7,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/style.css">  
-        <script src="js/script.js" async defer></script>
+        <script src="js/script.js" defer type="module"></script>
     </head>
     <body class="eeee">
         <div class="container">
@@ -19,28 +19,28 @@
                 <div class="controls__control mode_new">
                     <h2>Dark mode</h2>
                     <label class="switch">                       
-                        <input type="checkbox" onchange="handleChange()">
+                        <input type="checkbox" id="darkmodeSwitch">
                         <span class="slider round"></span>
                       </label>
                 </div>
                 <div class="controls__control iconSize">  
                 <h2>Icon size</h2>                               
                     <div>
-                        <input type="range" min="12" max="96" oninput="handleSizeRange(this)" value="32">   <span id="rangeValue" class="rangeValue">32</span>
+                        <input type="range" min="12" max="96" value="32" id="iconSizeRange"> <span id="rangeValue" class="rangeValue">32</span>
                     </div>                    
                 </div>        
                 <div class="controls__control iconColor">  
                     <h2>Icon color</h2>                               
                         <div class="color">
-                            <input type="color" oninput="setIconColor(this)" id="iconColorPicker">
-                            <button class="reset" onclick="resetIconColor()"> <svg><use href="#undo"/></svg></button>
+                            <input type="color" id="iconColorPicker">
+                            <button class="reset" id="resetIconColor"> <svg><use href="#undo"/></svg></button>
                         </div>                    
                     </div>     
                 <div class="controls__control search">
                     <h2>Search icon</h2>
                     <div class="search__input">
-                        <input type="text" onkeyup="search(this)" id="searchForm" class="searchForm">
-                        <button class="reset" onclick="clearSearch()"><svg><use href="#undo"/></svg></button>
+                        <input type="text" id="searchForm" class="searchForm">
+                        <button class="reset" id="clearSearch"><svg><use href="#undo"/></svg></button>
                     </div>
                 </div>
         </div>
