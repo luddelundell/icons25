@@ -9,7 +9,7 @@
   --card-shadow-color:#f7f7f7;
   --border-color:#eee;
   --icon-size:32px;
-  --link-color:#299EE7;
+  --link-color:hsl(203, 80%, 43%);
   --link-color-light:#CCEBFF;
   --font-family:"Helvetica Neue";
   --tag-background-color: hsl(292, 80%, 96%);
@@ -73,6 +73,10 @@ aside.toolbar {
   justify-content: space-between;
   height: 100vh;
   border-right: 1px solid var(--border-color);
+}
+aside.toolbar a:link, aside.toolbar a:visited {
+  color: var(--link-color);
+  text-decoration: none;
 }
 aside.toolbar h1 {
   padding: 1.5em;
@@ -410,4 +414,22 @@ input[type=range]::-webkit-slider-thumb {
   height: 1rem;
   width: 1rem;
   border-radius: 24px;
+}
+
+.downloads ul li {
+  list-style: none;
+  margin: 0 0 0.35em 0;
+}
+.downloads a {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  font-size: 0.875em;
+}
+.downloads a:hover {
+  color: red;
+}
+.downloads .icon {
+  --icon-size:18px;
+  fill: currentColor;
 }/*# sourceMappingURL=style.css.map */

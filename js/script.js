@@ -40,7 +40,7 @@ document.getElementById('iconSizeRange').addEventListener('input', function(e){
     let value = this.value;    
     rangeValueText.innerHTML=value;
     r.style.setProperty('--icon-size', value+'px')      
-}) 
+});
 
 // SEARCH
 const searchTags = (searchString) => {
@@ -50,7 +50,9 @@ const searchTags = (searchString) => {
         )
         .map(icon => icon);
 };
- document.getElementById('searchForm').addEventListener('keyup', function(e) {
+
+// Lyssnar på sökning
+document.getElementById('searchForm').addEventListener('keyup', function(e) {
     if (this.value.length > 2) {
         let result = searchTags(this.value);        
         renderIcons(result);
@@ -66,14 +68,16 @@ document.getElementById('clearSearch').addEventListener('click', function() {
     searchResult.innerHTML=`${icons.length} icons`;
     putListenersOnAllTheIcons();
 });
-    const getTagsById = (id) => {
-        const icon = icons.find(icon => icon.id === id);
-        return icon ? icon.tags : null;
-    }
-    const getSinceById = (id) => {
-        const icon = icons.find(icon => icon.id === id);
-        return icon ? icon.since : null;
-    }
+
+const getTagsById = (id) => {
+    const icon = icons.find(icon => icon.id === id);
+    return icon ? icon.tags : null;
+}
+const getSinceById = (id) => {
+    const icon = icons.find(icon => icon.id === id);
+    return icon ? icon.since : null;
+}
+
 // Download
 function downloadIcon(id){
     const getSymbolById = (id) => {
@@ -98,13 +102,9 @@ function putListenerOnTheDownLoadButton(){
     const btn = document.getElementById('btnDownloadSvg').addEventListener('click', function(){
         downloadIcon(this.dataset.icon);
     })
-
 }
 const focusArea = document.getElementById('focusArea');
 const allIconItems = document.getElementsByClassName('listIcons__item');
-
-
-
 
 function giveFocus(i, e){        
     for (let q = 0; q < allIconItems.length; q++) {
@@ -206,3 +206,15 @@ function putListenersOnAllTheTagButtons(){
 }
 
 putListenersOnAllTheIcons();
+
+document.getElementById('btnSpriteDownload').addEventListener('click', function(event){
+    const blob = new Blob([sprite()], {type: 'imgage/svg+xml'})
+    const fileURL = URL.createObjectURL(blob);
+    const downloadLink = document.createElement('a');
+    downloadLink.href = fileURL;
+    downloadLink.download = `sprite.svg`;
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    URL.revokeObjectURL(fileURL);
+    event.preventDefault();
+})

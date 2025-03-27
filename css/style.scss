@@ -9,7 +9,7 @@
     --card-shadow-color:#f7f7f7;
     --border-color:#eee;
     --icon-size:32px;
-    --link-color:#299EE7;
+    --link-color:hsl(203, 80%, 43%);
     --link-color-light:#CCEBFF;
     --font-family:'Helvetica Neue';
     --tag-background-color: hsl(292, 80%, 96%);
@@ -61,6 +61,11 @@ body {
     height:100vh;
 }
 aside.toolbar {
+    a:link, a:visited {
+        color:var(--link-color);
+        text-decoration: none;        
+        
+    }
     background-color: var(--section-background-color);    
     align-items: center;
     justify-content: space-between;
@@ -425,4 +430,24 @@ button.btnClearTagFilter {
     height: 1rem;
     width: 1rem;   
     border-radius: 24px; 
+ }
+ .downloads {
+    ul li {
+        list-style: none;  
+        margin:0 0 .35em 0;
+    }
+    a {
+
+        display: flex;
+        gap:.5em;
+        align-items: center;
+        font-size: .875em;
+        &:hover {
+            color:red;
+        }
+    }
+    .icon {
+        --icon-size:18px;
+        fill:currentColor;
+    }
  }
