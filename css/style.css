@@ -155,7 +155,6 @@ main {
 
 aside.focus {
   border-left: 1px solid var(--border-color);
-  width: 20%;
 }
 aside.focus h2 {
   margin: 1em 0.5em 0.5em 1em;
