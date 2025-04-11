@@ -71,7 +71,9 @@ aside.toolbar {
   background-color: var(--section-background-color);
   align-items: center;
   justify-content: space-between;
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
   border-right: 1px solid var(--border-color);
 }
 aside.toolbar a:link, aside.toolbar a:visited {
@@ -79,7 +81,7 @@ aside.toolbar a:link, aside.toolbar a:visited {
   text-decoration: none;
 }
 aside.toolbar h1 {
-  padding: 1.5em;
+  padding: 1em 1.5em;
 }
 aside.toolbar h2 {
   font-size: 0.55rem;
@@ -92,10 +94,18 @@ aside.toolbar .controls {
   display: flex;
   flex-direction: column;
   font-size: 1em;
+  box-sizing: border-box;
+  justify-content: space-between;
+  height: 100dvh;
 }
 aside.toolbar .controls__control {
   border-bottom: 1px solid var(--border-color);
   padding: 1.5rem 1.5rem;
+}
+aside.toolbar .version {
+  margin-top: auto;
+  font-size: 80%;
+  opacity: 0.65;
 }
 aside.toolbar button.reset {
   border: 1px solid transparent;
