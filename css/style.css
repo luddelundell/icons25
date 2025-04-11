@@ -165,6 +165,7 @@ aside.focus h3 {
   font-size: 0.75rem;
 }
 aside.focus .innerFocusArea {
+  width: 20vw;
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -223,7 +224,7 @@ aside.focus .inuse__48 {
   --icon-size:48px;
 }
 
-button.dl {
+a.dl {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -237,14 +238,15 @@ button.dl {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
   gap: 0.25em;
   font-family: var(--font-family);
 }
-button.dl svg.icon {
+a.dl svg.icon {
   --icon-size:20px;
   fill: var(--link-color);
 }
-button.dl:hover {
+a.dl:hover {
   cursor: pointer;
   background-color: var(--link-color-light);
 }
@@ -265,7 +267,7 @@ button.dl:hover {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  gap: 0.5em;
+  gap: 0.75em;
   position: relative;
 }
 .listIcons__item {
@@ -276,7 +278,7 @@ button.dl:hover {
   padding: 1.25em;
   border: 1px solid var(--card-border-color);
   box-shadow: 0 0 12px var(--card-shadow-color);
-  border-radius: 14px;
+  border-radius: 4px;
   position: relative;
 }
 .listIcons__item pre {

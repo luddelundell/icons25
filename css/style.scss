@@ -161,7 +161,7 @@ aside.focus {
         font-size: .75rem;
     }
     .innerFocusArea{
-        // padding:2.5em;
+        width:20vw;
         display: flex;
         flex-direction: column;
         gap:1em;
@@ -225,7 +225,7 @@ aside.focus {
         }
     }
 }
-button.dl {
+a.dl {
     appearance: none;
     border:1px solid var(--link-color);
     color:var(--link-color);
@@ -237,6 +237,7 @@ button.dl {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
     gap:.25em;
     font-family: var(--font-family);
     svg.icon {
@@ -272,7 +273,7 @@ button.dl {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    gap:.5em;
+    gap:.75em;
     position: relative;
     &__item {
         display: flex;
@@ -284,7 +285,7 @@ button.dl {
         padding:1.25em;
         border:1px solid var(--card-border-color);
         box-shadow: 0 0 12px var(--card-shadow-color);
-        border-radius: 14px;    
+        border-radius: 4px;    
         position: relative;
         pre {
             font-size: .75rem;            
