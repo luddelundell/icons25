@@ -154,7 +154,7 @@ function giveFocus(i, e){
                 }
                 else return 'icon';
             }
-            document.getElementById('searchResult').innerHTML=`Found ${result.length} ${noOfIcons()} with tag "${tag}" <button class="btnClearTagFilter" id="btnResetTagFilter"><svg class="icon"><use href="#undo"/></svg>Clear filter</button>`;
+            document.getElementById('searchResult').innerHTML=`Found ${result.length} ${noOfIcons()} with tag "${tag}" <button class="btnClearTagFilter" id="btnResetTagFilter"><svg class="icon"><use xlink:href="/dist/sprite.svg#undo"/></svg>Clear filter</button>`;
           putListenerOnResetTagFilterButton();
           putListenersOnAllTheIcons();
     }
