@@ -912,7 +912,6 @@ export const icons = [
         id:'arrow-left-dotted',
         tags:['arrow', 'left', 'back', 'return', 'direction', 'dotted'],
         since:'2025.XX.Y',
-        
     },
     {
         id:'arrow-right-dotted',
