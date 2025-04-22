@@ -4,14 +4,35 @@ export const icons = [
         tags:['alert', 'warning', 'exlamation', 'circle', 'attention', 'danger', 'caution', 'error', 'dialog'],
         since:'2025.XX.Y',
         
-    },    
-
+    },     
+       {
+        id:'alert-circle-fill',
+        tags:['alert', 'warning', 'exlamation', 'circle', 'attention', 'danger', 'caution', 'error', 'dialog', 'fill'],
+        since:'2025.XX.Y',
+        
+    },   
+    {
+        id:'sun',
+        tags:['sun', 'light', 'day', 'bright'],
+        since:'2025.XX.Y',
+        
+    },        
+    {
+        id:'moon',
+        tags:['moon', 'dark', 'night', 'dim'],
+        since:'2025.XX.Y',
+        
+    },  
     {
         id:'alert-diamond',
         tags:['alert', 'warning', 'exlamation', 'diamond', 'attention', 'danger', 'caution', 'error', 'dialog'],
-        since:'2025.XX.Y',
-        
-    },      
+        since:'2025.XX.Y',        
+    },          
+    {
+        id:'alert-diamond-fill',
+        tags:['alert', 'warning', 'exlamation', 'diamond', 'attention', 'danger', 'caution', 'error', 'dialog', 'fill'],
+        since:'2025.XX.Y',        
+    },  
     {
         id:'filter-menu',
         tags:['filter', 'menu', 'sort', 'organize', 'arrange', 'funnel', 'list'],
@@ -19,11 +40,27 @@ export const icons = [
         
     }, 
     {
-        id:'alert-triangle',
-        tags:['alert', 'warning', 'exlamation', 'triangle', 'attention', 'danger', 'caution', 'error', 'dialog'],
+        id:'login',
+        tags:['login', 'enter', 'signin', 'join', 'arrow'],
         since:'2025.XX.Y',
         
+    }, 
+    {
+        id:'logout',
+        tags:['exit', 'logout', 'signout', 'leave', 'arrow',],
+        since:'2025.XX.Y',
+        
+    }, 
+    {
+        id:'alert-triangle',
+        tags:['alert', 'warning', 'exlamation', 'triangle', 'attention', 'danger', 'caution', 'error', 'dialog'],
+        since:'2025.XX.Y',        
     },      
+    {
+        id:'alert-triangle-fill',
+        tags:['alert', 'warning', 'exlamation', 'triangle', 'attention', 'danger', 'caution', 'error', 'dialog', 'fill'],
+        since:'2025.XX.Y',        
+    },     
     {
         id:'page',
         tags:['page', 'web', 'html', 'content'],
@@ -158,7 +195,12 @@ export const icons = [
         since:'2025.XX.Y',
        
     },
-   
+       {
+        id:'info-circle-fill',
+        tags:['info', 'circle', 'information', 'dialog', 'fill'], 
+        since:'2025.XX.Y',
+       
+    },
     {
         id:'bell',
         tags:['alarm', 'bell', 'notification'], 
@@ -192,6 +234,12 @@ export const icons = [
     {
         id:'question-circle',
         tags:['question', 'circle', 'help', 'info', 'alert', 'dialog'], 
+        since:'2025.XX.Y',
+
+    },    
+    {
+        id:'question-circle-fill',
+        tags:['question', 'circle', 'help', 'info', 'alert', 'dialog', 'fill'], 
         since:'2025.XX.Y',
 
     },
@@ -697,7 +745,11 @@ export const icons = [
         id:'checkmark-circle',
         tags:['check', 'checkmark', 'circle', 'success', 'approved', 'dialog'],
         since:'2025.XX.Y',
-
+    },      
+    {
+        id:'checkmark-circle-fill',
+        tags:['check', 'checkmark', 'circle', 'success', 'approved', 'dialog', 'fill'],
+        since:'2025.XX.Y',
     },  
     {
         id:'checkmark',
@@ -708,7 +760,11 @@ export const icons = [
         id:'checkmark-square',
         tags:['check', 'checkmark', 'square', 'success', 'approved'],
         since:'2025.XX.Y',
-
+    },  
+    {
+        id:'checkmark-square-fill',
+        tags:['check', 'checkmark', 'square', 'success', 'approved', 'fill'],
+        since:'2025.XX.Y',
     },  
     {
         id:'comment-poll',
@@ -878,6 +934,5 @@ export const icons = [
     { id:'layout-sidebar',
         tags:['layout', 'sidebar', 'navigation', 'arrange', 'left'],
         since:'2025.XX.Y',
-
     },
 ]
