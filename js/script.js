@@ -1,19 +1,6 @@
 import {icons} from './icons.js';
 icons.sort((a, b) => a.id.localeCompare(b.id));
-// const sprite = () => {
-//     let output = `<?xml version="1.0" encoding="utf-8"?>
-//          <svg xmlns="http://www.w3.org/2000/svg">
-//            <defs>`;
-//            icons.forEach(icon => {
-//             output+=`<symbol id="${icon.id}" viewBox="0 0 24 24">${icon.symbol}</symbol>`
-//             });
-//             output += `</defs>
-//          </svg>`
-//             return output;
-// }
 
-// const mySprite = document.getElementById('mySprite');
-// mySprite.innerHTML = sprite();
 
 const listIcons = document.getElementById('listIcons');
 const searchResult = document.getElementById('searchResult');
@@ -22,7 +9,6 @@ const searchResult = document.getElementById('searchResult');
 function renderIcons(myIcons) {
     let output = '';
     myIcons.forEach(icon => {
-        // output +=  `<div class="listIcons__item" data-icon="${icon.id}"><svg class="icon"><use href="#${icon.id}" /></svg><pre>${icon.id}</pre></div>`;
         output +=  `<div class="listIcons__item" data-icon="${icon.id}"><svg class="icon"><use xlink:href="/dist/sprite.svg#${icon.id}" /></svg><pre>${icon.id}</pre></div>`;
     })
     listIcons.innerHTML=output;
@@ -79,31 +65,6 @@ const getSinceById = (id) => {
     return icon ? icon.since : null;
 }
 
-// Download - use direct link to svg instead
-// function downloadIcon(id){
-//     const getSymbolById = (id) => {
-//         const icon = icons.find(icon => icon.id === id);
-//         return icon ? icon.symbol : null;
-//     };
-//     const svgStart = `<?xml version="1.0" encoding="UTF-8"?><svg id="${id}" data-name="${id}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">`;
-//     const svgEnd = `</svg>`;
-//     let symbolData = svgStart; 
-//     symbolData += getSymbolById(id);
-//     symbolData += svgEnd;
-//     const blob = new Blob([symbolData], {type: 'imgage/svg+xml'})
-//     const fileURL = URL.createObjectURL(blob);
-//     const downloadLink = document.createElement('a');
-//     downloadLink.href = fileURL;
-//     downloadLink.download = `${id}.svg`;
-//     document.body.appendChild(downloadLink);
-//     downloadLink.click();
-//     URL.revokeObjectURL(fileURL);
-// }
-// function putListenerOnTheDownLoadButton(){
-//     const btn = document.getElementById('btnDownloadSvg').addEventListener('click', function(){
-//         downloadIcon(this.dataset.icon);
-//     })
-// }
 const focusArea = document.getElementById('focusArea');
 const allIconItems = document.getElementsByClassName('listIcons__item');
 
@@ -142,7 +103,6 @@ function giveFocus(i, e){
     focusArea.innerHTML=content;
     e.classList.add('foo');
     putListenersOnAllTheTagButtons();
-    // putListenerOnTheDownLoadButton();
 }
     function filterByTag(tag){
         let result = 'foo';
@@ -201,7 +161,6 @@ document.getElementById("btnResetTagFilter").addEventListener('click', function(
 })
 }
 
-
 function putListenersOnAllTheTagButtons(){
     const tagElements = document.querySelectorAll('button.tag')
     tagElements.forEach(btn => {
@@ -214,15 +173,3 @@ function putListenersOnAllTheTagButtons(){
 }
 
 putListenersOnAllTheIcons();
-
-// document.getElementById('btnSpriteDownload').addEventListener('click', function(event){
-//     const blob = new Blob([sprite()], {type: 'imgage/svg+xml'})
-//     const fileURL = URL.createObjectURL(blob);
-//     const downloadLink = document.createElement('a');
-//     downloadLink.href = fileURL;
-//     downloadLink.download = `sprite.svg`;
-//     document.body.appendChild(downloadLink);
-//     downloadLink.click();
-//     URL.revokeObjectURL(fileURL);
-//     event.preventDefault();
-// })

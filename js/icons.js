@@ -40,6 +40,12 @@ export const icons = [
         
     }, 
     {
+        id:'filter-badge',
+        tags:['filter', 'badge', 'sort', 'organize', 'arrange', 'funnel', 'list'],
+        since:'2025.XX.Y',
+        
+    }, 
+    {
         id:'login',
         tags:['login', 'enter', 'signin', 'join', 'arrow'],
         since:'2025.XX.Y',
@@ -71,19 +77,16 @@ export const icons = [
         id:'page-article',
         tags:['page', 'web', 'html', 'article', 'news', 'text', 'content'],
         since:'2025.XX.Y',
-        
     },     
     {
         id:'page-group',
         tags:['page', 'web', 'html', 'group', 'users'],
         since:'2025.XX.Y',
-        
     },  
     {
         id:'folder',
         tags:['folder', 'files', 'archive', 'storage', 'documents'],
         since:'2025.XX.Y',
-        
     }, 
     {
         id:'file-archive',
@@ -262,6 +265,18 @@ export const icons = [
        
     },
     {
+        id:'thumbs-down',
+        tags:['thumb', 'dislike', 'rating', 'down', 'minus'],
+        since: '2025.XX.Y',
+       
+    },
+    {
+        id:'thumbs-down-fill',
+        tags:['thumb', 'dislike', 'rating', 'down', 'minus', 'fill'],
+        since: '2025.XX.Y',
+       
+    },
+    {
         id:'comment',
         tags:['bubble', 'comment', 'message', 'dialouge', 'feedback', 'conversation'],
         since: '2025.XX.Y',
@@ -310,6 +325,12 @@ export const icons = [
        
     },
     {
+        id:'map',
+        tags:['map', 'location', 'direction', 'navigation', 'guide'], 
+        since:'2025.XX.Y',
+       
+    },
+    {
         id:'map-marker',
         tags:['map', 'location', 'pin', 'marker'], 
         since:'2025.XX.Y',
@@ -318,6 +339,12 @@ export const icons = [
     {
         id:'map-location',
         tags:['map', 'location', 'pin', 'marker'], 
+        since:'2025.XX.Y',
+       
+    },    
+    {
+        id:'map-search',
+        tags:['map', 'location', 'search'], 
         since:'2025.XX.Y',
        
     },
@@ -932,6 +959,30 @@ export const icons = [
     },    
     { id:'layout-sidebar',
         tags:['layout', 'sidebar', 'navigation', 'arrange', 'left'],
+        since:'2025.XX.Y',
+    },   
+    { id:'color-bucket',
+        tags:['color', 'bucket', 'design', 'fill'],
+        since:'2025.XX.Y',
+    },
+    { id:'color-palette',
+        tags:['color', 'colors', 'palette', 'design'],
+        since:'2025.XX.Y',
+    },
+    { id:'color-picker',
+        tags:['color', 'picker', 'design', 'sample', 'dropper'],
+        since:'2025.XX.Y',
+    },
+    { id:'arrange-list-desc',
+        tags:['arrange', 'sort', 'list', 'arrow', 'text', 'filter', 'descending'],
+        since:'2025.XX.Y',
+    },
+    { id:'arrange-list-asc',
+        tags:['arrange', 'sort', 'list', 'arrow', 'text', 'filter', 'ascending'],
+        since:'2025.XX.Y',
+    },    
+    { id:'arrange',
+        tags:['arrange', 'sort', 'list', 'arrow', 'text', 'filter', 'ascending', 'descending'],
         since:'2025.XX.Y',
     },
 ]
